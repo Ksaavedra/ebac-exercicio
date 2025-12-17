@@ -39,6 +39,18 @@ Página HTML básica demonstrando conceitos fundamentais de estruturação, esti
 
 [Ver detalhes do Módulo 5](./módulo%205/README.md)
 
+### Módulo 6 - Jogo de Adivinhação (1 a 100)
+
+Jogo em JavaScript onde o computador escolhe um número secreto de 1 a 100 e o jogador tenta adivinhar com dicas de “maior/menor” e número máximo de tentativas.
+
+**Arquivos:**
+
+-  `index.html` - Página principal
+-  `style.css` - Estilos do jogo
+-  `script.js` - Lógica do jogo
+
+[Ver detalhes do Módulo 6](./módulo%206/README.md)
+
 ## 🛠️ Tecnologias Utilizadas
 
 -  **HTML5**
@@ -68,6 +80,11 @@ ebac-exercicio/
 │   ├── index.js
 │   ├── images/
 │   │   └── cachorra.png
+│   └── README.md
+├── módulo 6/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
 │   └── README.md
 └── README.md
 ```
