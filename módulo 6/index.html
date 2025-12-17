@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Jogo de Adivinhação</h1>
+            <p class="descricao">
+                Eu pensei em um número secreto entre <strong>1</strong> e <strong>100</strong>.
+                Você tem <strong>10</strong> tentativas para adivinhar. A cada chute, eu digo se o número secreto é
+                maior ou menor.
+            </p>
+        </header>
+
+        <section class="card" aria-label="Área do jogo">
+            <label for="chute" class="label">Seu chute (1 a 100)</label>
+            <div class="linha">
+                <input id="chute" class="input" type="number" min="1" max="100" step="1" inputmode="numeric"
+                    placeholder="Ex: 42" />
+                <button id="btnChutar" class="btn" type="button">Chutar</button>
+            </div>
+
+            <p id="dica" class="texto" aria-live="polite"></p>
+            <p id="resultado" class="texto" aria-live="polite"></p>
+            <p id="tentativas" class="texto tentativas" aria-live="polite"></p>
+
+            <button id="btnReiniciar" class="btn btn-secundario" type="button" hidden>Jogar novamente</button>
+        </section>
+    </main>
+</body>
+
+</html>
