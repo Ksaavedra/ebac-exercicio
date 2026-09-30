@@ -1,7 +1,8 @@
 class Parquimetro {
    tarifas = [
-      { valor: 1, tempo: 'cole o tempo desta faixa' },
-      { valor: 2, tempo: 'cole o tempo desta faixa' },
+      { valor: 1, tempo: '30 minutos' },
+      { valor: 1.75, tempo: '60 minutos' },
+      { valor: 3, tempo: '120 minutos' },
    ];
 
    // Constructor: recebe o valor digitado e guarda na propriedade valor
@@ -40,7 +41,7 @@ class Parquimetro {
       return tarifa.tempo;
    }
 
-   // Método: devolve o que sobrou depois de pagar a faixa utilizada
+   // Método: devolve o que sobrou do valor informado depois de pagar a faixa
    calcularTroco() {
       const tarifa = this.buscarTarifa();
 
@@ -54,7 +55,7 @@ class Parquimetro {
          return 0;
       }
 
-      return troco;
+      return Math.round(troco * 100) / 100;
    }
 
    // Método: monta o texto que aparece na tela
