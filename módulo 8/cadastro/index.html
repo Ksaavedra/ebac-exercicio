@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="cartao">
+        <h1>Cadastro</h1>
+        <p>Digite o CEP para preencher o endereço. Os dados ficam salvos neste navegador.</p>
+
+        <form id="cadastro" novalidate>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" inputmode="numeric" maxlength="9" placeholder="00000-000" autocomplete="postal-code" required>
+            <p id="mensagem-cep" aria-live="polite"></p>
+
+            <label for="logradouro">Logradouro</label>
+            <input type="text" id="logradouro" name="logradouro" autocomplete="address-line1">
+
+            <div class="linha">
+                <div>
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero">
+                    <label class="sem-numero" for="sem-numero">
+                        <input type="checkbox" id="sem-numero" name="semNumero">
+                        Sem número
+                    </label>
+                </div>
+                <div>
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+            </div>
+
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro">
+
+            <div class="linha">
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="uf">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" name="uf" maxlength="2">
+                </div>
+            </div>
+
+            <button type="submit">Salvar cadastro</button>
+        </form>
+    </main>
+
+    <div id="modal" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-texto"></p>
+            <button type="button" id="fechar-modal">Fechar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
