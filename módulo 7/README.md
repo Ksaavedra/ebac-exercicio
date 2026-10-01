@@ -8,11 +8,12 @@ Simulador de parquímetro feito com **HTML**, **CSS** e **JavaScript**, usando *
 
 - O valor digitado é lido do campo com id `valor`
 - O objeto da classe `Parquimetro` só é criado ao clicar em **Calcular**
-- O constructor guarda esse valor na propriedade `valor`
+- O constructor normaliza a entrada e guarda o valor em `valor`
+- Se o campo estiver vazio, a aplicação mostra a mensagem **Nenhum valor foi digitado**
 - Valor menor que **R$ 1,00** exibe **Valor insuficiente**
-- A partir de R$ 1,00, o programa usa a tarifa clicada ou a maior faixa que o valor cobre
+- A partir de R$ 1,00, o programa identifica automaticamente a maior faixa que o valor cobre
 - O troco é o que sobra do saldo depois de pagar essa faixa
-- O tempo e o troco aparecem na div com id `resultado`, e o saldo fica com o troco
+- O tempo e o troco aparecem na div com id `resultado`
 
 As regras de tempo e troco ficam dentro da classe, nos métodos `calcularTempo()` e `calcularTroco()`.
 
@@ -46,9 +47,9 @@ módulo 7/
 ## 🚀 Como executar
 
 1. Abra o arquivo `parquimetro/index.html` no navegador
-2. Adicione um saldo maior que a tarifa
-3. Clique em **R$ 1,00**, **R$ 1,75**, **R$ 3,00** ou em **Calcular**
-4. Leia o tempo de permanência e o troco
+2. Digite um valor no campo **Valor (R$)**
+3. Clique em **Calcular**
+4. Leia a mensagem exibida com o tempo de permanência e o troco, ou a mensagem de erro caso o campo esteja vazio ou o valor seja insuficiente
 
 ## ✅ Conceitos praticados
 
