@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #1f2933;
+    background: linear-gradient(160deg, #e8eef6 0%, #d5e3dc 100%);
+}
+
+main {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: #0f3d4c;
+}
+
+main > p {
+    margin: 0 0 24px;
+    color: #52606d;
+}
+
+.painel {
+    display: grid;
+    gap: 20px;
+}
+
+.cartao {
+    padding: 28px 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(31, 41, 51, 0.12);
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 1.2rem;
+    color: #0f3d4c;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+button {
+    width: 100%;
+    font: inherit;
+}
+
+input {
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border: 1px solid #c5d0dc;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 2px solid #1f7a8c;
+    border-color: #1f7a8c;
+}
+
+#mensagem {
+    min-height: 1.4em;
+    margin: -4px 0 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.sucesso {
+    color: #0b7a43;
+}
+
+.erro {
+    color: #b42318;
+}
+
+form button {
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #0f3d4c;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #1f7a8c;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #f7f9fb;
+    border-radius: 12px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 1.4fr);
+    gap: 16px;
+    flex: 1;
+    min-width: 0;
+}
+
+li span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #7b8794;
+}
+
+li strong {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.vazio {
+    display: block;
+    margin: 0;
+    color: #52606d;
+    background: transparent;
+}
+
+.excluir {
+    width: auto;
+    padding: 8px 14px;
+    border: 1px solid #f3c1bc;
+    border-radius: 8px;
+    background: #fff5f4;
+    color: #b42318;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background: #b42318;
+    color: #ffffff;
+}
+
+@media (max-width: 520px) {
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
