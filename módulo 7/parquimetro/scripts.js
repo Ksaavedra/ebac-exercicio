@@ -7,7 +7,15 @@ class Parquimetro {
 
    // Constructor: recebe o valor digitado e guarda na propriedade valor
    constructor(valor) {
-      this.valor = Number(valor);
+      const valorNormalizado = typeof valor === 'string' ? valor.trim() : valor;
+
+      this.valorDigitado = valorNormalizado;
+      this.valor =
+         valorNormalizado === '' ||
+         valorNormalizado === null ||
+         typeof valorNormalizado === 'undefined'
+            ? NaN
+            : Number(valorNormalizado);
    }
 
    // Método: escolhe a maior faixa cujo preço o valor informado consegue pagar
@@ -60,6 +68,14 @@ class Parquimetro {
 
    // Método: monta o texto que aparece na tela
    montarMensagem() {
+      if (
+         this.valorDigitado === '' ||
+         this.valorDigitado === null ||
+         typeof this.valorDigitado === 'undefined'
+      ) {
+         return 'Nenhum valor foi digitado';
+      }
+
       if (Number.isNaN(this.valor) || this.valor < 1) {
          return 'Valor insuficiente';
       }
