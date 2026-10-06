@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="#home">
+            <svg class="logo__marca" viewBox="0 0 32 32" aria-hidden="true">
+                <circle cx="16" cy="16" r="16" fill="#16324f"/>
+                <text x="16" y="21" text-anchor="middle" fill="#f7f1e8" font-size="12" font-family="Segoe UI, sans-serif" font-weight="700">CW</text>
+            </svg>
+            <span class="logo__nome">Agência <strong>Criativa Web</strong></span>
+        </a>
+
+        <div class="menu">
+            <input class="menu__alternar" type="checkbox" id="menu-toggle">
+            <label class="menu__botao" for="menu-toggle">
+                <span class="menu__icone" aria-hidden="true"></span>
+                Menu
+            </label>
+
+            <nav class="menu__lista" aria-label="Principal">
+                <a class="menu__link" href="#home">Home</a>
+                <a class="menu__link" href="#sobre">Sobre nós</a>
+                <a class="menu__link" href="#servicos">Serviços</a>
+                <a class="menu__link" href="#depoimentos">Depoimentos</a>
+                <a class="menu__link" href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao home" id="home">
+            <picture class="home__imagem">
+                <source media="(min-width: 64rem)" srcset="imagens/banner-1400.svg">
+                <source media="(min-width: 40rem)" srcset="imagens/banner-800.svg">
+                <img
+                    class="imagem"
+                    src="imagens/banner-480.svg"
+                    srcset="imagens/banner-480.svg 480w, imagens/banner-800.svg 800w, imagens/banner-1400.svg 1400w"
+                    sizes="(max-width: 40rem) 92vw, (max-width: 64rem) 46vw, 34rem"
+                    alt="Ilustração clara de uma mesa com tela, planta e janela do estúdio."
+                    width="1400"
+                    height="900">
+            </picture>
+
+            <div class="home__texto">
+                <p class="rotulo">Estúdio digital</p>
+                <h1 class="titulo titulo--principal">A presença do seu negócio, desenhada com calma.</h1>
+                <p class="texto">A Agência Criativa Web cria sites, marcas e conteúdos para quem precisa ser encontrado no celular e no computador.</p>
+                <a class="botao" href="#contato">Quero conversar</a>
+            </div>
+        </section>
+
+        <section class="secao sobre" id="sobre">
+            <picture class="sobre__imagem">
+                <source media="(min-width: 40rem)" srcset="imagens/sobre-960.svg">
+                <img
+                    class="imagem"
+                    src="imagens/sobre-480.svg"
+                    srcset="imagens/sobre-480.svg 480w, imagens/sobre-960.svg 960w"
+                    sizes="(max-width: 40rem) 92vw, 24rem"
+                    alt="Ilustração de três pessoas criando um projeto digital juntas."
+                    width="960"
+                    height="720">
+            </picture>
+
+            <div class="sobre__conteudo">
+                <p class="rotulo">Sobre nós</p>
+                <h2 class="titulo titulo--secao">Um estúdio pequeno, com cuidado de quem faz à mão.</h2>
+                <p class="texto">Somos uma agência fictícia de design digital. Ajudamos negócios locais a aparecer na web com identidade visual, sites e conteúdo que as pessoas conseguem usar sem esforço.</p>
+                <ul class="sobre__lista">
+                    <li class="sobre__item"><strong>Clareza.</strong> Cada tela explica o próximo passo.</li>
+                    <li class="sobre__item"><strong>Cuidado.</strong> Tipografia, cor e espaçamento andam juntos.</li>
+                    <li class="sobre__item"><strong>Parceria.</strong> O projeto cresce junto com o cliente.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="secao servicos" id="servicos">
+            <div class="secao__intro">
+                <p class="rotulo rotulo--claro">Serviços</p>
+                <h2 class="titulo titulo--secao">O que a agência entrega</h2>
+            </div>
+
+            <ul class="grade">
+                <li class="cartao cartao--escuro">
+                    <h3 class="titulo titulo--cartao">Identidade visual</h3>
+                    <p class="texto">Nome, marca e paleta para o negócio ser reconhecido de longe.</p>
+                </li>
+                <li class="cartao cartao--escuro">
+                    <h3 class="titulo titulo--cartao">Sites responsivos</h3>
+                    <p class="texto">Páginas que se reorganizam no celular, no tablet e no computador.</p>
+                </li>
+                <li class="cartao cartao--escuro">
+                    <h3 class="titulo titulo--cartao">UX e interface</h3>
+                    <p class="texto">Fluxos simples para a pessoa achar o que precisa sem se perder.</p>
+                </li>
+                <li class="cartao cartao--escuro">
+                    <h3 class="titulo titulo--cartao">Conteúdo para redes</h3>
+                    <p class="texto">Peças e textos com a mesma voz da marca em todos os canais.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao depoimentos" id="depoimentos">
+            <div class="secao__intro">
+                <p class="rotulo">Depoimentos</p>
+                <h2 class="titulo titulo--secao">Quem já passou por aqui</h2>
+            </div>
+
+            <ul class="grade grade--depoimentos">
+                <li class="cartao">
+                    <blockquote class="citacao">
+                        <p class="citacao__texto">“O site novo ficou fácil de ler no celular. Os pedidos pelo formulário aumentaram na primeira semana.”</p>
+                        <footer class="citacao__autor">Marina Alves, Padaria do Bairro</footer>
+                    </blockquote>
+                </li>
+                <li class="cartao">
+                    <blockquote class="citacao">
+                        <p class="citacao__texto">“A identidade visual organizou o que a gente já fazia. Agora o estúdio parece o mesmo em todo lugar.”</p>
+                        <footer class="citacao__autor">Ricardo Nunes, Estúdio Lume</footer>
+                    </blockquote>
+                </li>
+                <li class="cartao">
+                    <blockquote class="citacao">
+                        <p class="citacao__texto">“Gostei do cuidado com os textos. A clínica explica os serviços sem parecer um panfleto.”</p>
+                        <footer class="citacao__autor">Helena Prado, Clínica Bem-Estar</footer>
+                    </blockquote>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao contato" id="contato">
+            <div class="contato__dados">
+                <p class="rotulo">Contato</p>
+                <h2 class="titulo titulo--secao">Vamos conversar sobre o seu projeto.</h2>
+                <address class="contato__endereco">
+                    <p class="texto">Rua das Palmeiras, 120<br>São Paulo, SP</p>
+                    <p class="texto"><a class="contato__link" href="tel:+551134567890">(11) 3456-7890</a></p>
+                    <p class="texto"><a class="contato__link" href="mailto:contato@agenciacriativaweb.com.br">contato@agenciacriativaweb.com.br</a></p>
+                </address>
+            </div>
+
+            <form class="formulario cartao" action="#" method="post">
+                <label class="formulario__rotulo" for="nome">Nome</label>
+                <input class="formulario__campo" type="text" id="nome" name="nome" autocomplete="name" required>
+
+                <label class="formulario__rotulo" for="email">E-mail</label>
+                <input class="formulario__campo" type="email" id="email" name="email" autocomplete="email" required>
+
+                <label class="formulario__rotulo" for="mensagem">Mensagem</label>
+                <textarea class="formulario__campo" id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button class="botao" type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape__texto">Agência Criativa Web. Página institucional fictícia.</p>
+    </footer>
+
+    <script>
+        var menuToggle = document.getElementById("menu-toggle");
+        var links = document.querySelectorAll(".menu__link");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function (evento) {
+                var destino = document.querySelector(this.getAttribute("href"));
+                var menuAberto = window.matchMedia("(max-width: 47.99rem)").matches;
+
+                menuToggle.checked = false;
+
+                if (!destino || !menuAberto) {
+                    return;
+                }
+
+                evento.preventDefault();
+                window.requestAnimationFrame(function () {
+                    destino.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
