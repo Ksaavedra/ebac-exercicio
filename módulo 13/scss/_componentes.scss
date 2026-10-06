@@ -1,0 +1,239 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.logo {
+   display: flex;
+   align-items: center;
+   gap: $espacamento * 0.75;
+   color: inherit;
+   font-size: $espacamento;
+   text-decoration: none;
+
+   &__marca {
+      width: $espacamento * 2.2;
+      height: $espacamento * 2.2;
+   }
+}
+
+.menu {
+   display: contents;
+
+   &__alternar {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+   }
+
+   &__botao {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.55em 0.9em;
+      border: $borda solid $cor-tinta;
+      border-radius: $raio-pilula;
+      font-size: 0.95rem;
+      font-weight: $peso-forte;
+      cursor: pointer;
+   }
+
+   &__alternar:focus-visible + &__botao {
+      @include foco;
+   }
+
+   &__icone {
+      position: relative;
+      display: block;
+      width: $espacamento;
+      height: 0.12rem;
+      border-radius: $espacamento;
+      background: $cor-tinta;
+
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         display: block;
+         width: $espacamento;
+         height: 0.12rem;
+         border-radius: $espacamento;
+         background: $cor-tinta;
+      }
+
+      &::before {
+         top: -0.35rem;
+      }
+
+      &::after {
+         top: $espacamento * 0.35;
+      }
+   }
+
+   &__lista {
+      display: none;
+      flex-basis: 100%;
+      flex-direction: column;
+      gap: $espacamento * 0.35;
+      padding: $espacamento-metade 0 calc($espacamento / 4);
+   }
+
+   &__alternar:checked ~ &__lista {
+      display: flex;
+   }
+
+   &__link {
+      padding: 0.45em 0;
+      color: inherit;
+      font-weight: $peso-link;
+      text-decoration: none;
+
+      &:hover {
+         color: $cor-ouro;
+      }
+
+      &:focus-visible {
+         @include foco;
+      }
+   }
+
+   @media (min-width: $tela-menu) {
+      &__botao {
+         display: none;
+      }
+
+      &__lista,
+      &__alternar:checked ~ &__lista {
+         display: flex;
+         flex-basis: auto;
+         flex-direction: row;
+         align-items: center;
+         gap: $espacamento * 1.5;
+         padding: 0;
+      }
+   }
+}
+
+.rotulo {
+   margin-bottom: $espacamento-metade;
+   font-size: $espacamento * 0.8;
+   font-weight: $peso-forte;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: $cor-ouro;
+
+   &--claro {
+      color: $cor-ouro-claro;
+   }
+}
+
+.titulo {
+   line-height: 1.15;
+   font-weight: $peso-titulo;
+
+   &--principal {
+      margin-bottom: $espacamento;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+   }
+
+   &--secao {
+      margin-bottom: $espacamento;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+   }
+
+   &--cartao {
+      margin-bottom: calc($espacamento / 2);
+      font-size: $espacamento * 1.25;
+   }
+}
+
+.texto {
+   margin-bottom: $espacamento;
+}
+
+.imagem {
+   display: block;
+   width: 100%;
+   height: auto;
+   min-height: $espacamento * 14;
+   object-fit: cover;
+   background: $cor-imagem;
+   border: $espacamento * 0.35 solid $cor-tinta;
+   border-radius: $raio;
+}
+
+.botao {
+   @include botao;
+
+   &:focus-visible {
+      @include foco;
+   }
+}
+
+.cartao {
+   padding: $espacamento * 1.5;
+   background: $cor-papel-claro;
+   border-radius: $raio;
+
+   &--escuro {
+      background: $cor-cartao-escuro;
+   }
+}
+
+.grade {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: $espacamento * 1.25;
+   padding: 0;
+   list-style: none;
+
+   @media (min-width: $tela-tablet) {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   @media (min-width: $tela-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   &--depoimentos {
+      @media (min-width: $tela-desktop) {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+}
+
+.citacao {
+   &__texto {
+      margin-bottom: $espacamento;
+      font-size: 1.125em;
+   }
+
+   &__autor {
+      color: $cor-apagada;
+      font-size: 0.9em;
+   }
+}
+
+.formulario {
+   &__rotulo {
+      display: block;
+      margin-bottom: $espacamento * 0.4;
+      font-weight: $peso-forte;
+   }
+
+   &__campo {
+      width: 100%;
+      margin-bottom: $espacamento;
+      padding: 0.8em 0.9em;
+      border: $borda solid $cor-campo;
+      border-radius: $raio * 0.6;
+      font: inherit;
+      color: $cor-tinta;
+      background: $cor-papel;
+
+      &:focus-visible {
+         @include foco;
+      }
+   }
+}

@@ -1,0 +1,30 @@
+@use "variaveis" as *;
+
+@mixin botao {
+   display: inline-block;
+   padding: 0.85em 1.3em;
+   border: 0;
+   border-radius: $raio-pilula;
+   background: $cor-tinta;
+   color: $cor-texto-claro;
+   font: inherit;
+   font-weight: $peso-forte;
+   text-decoration: none;
+   cursor: pointer;
+
+   &:hover {
+      background: $cor-tinta-escura;
+   }
+}
+
+@mixin espacamento($vertical, $horizontal: $lateral) {
+   padding-top: $vertical;
+   padding-right: $horizontal;
+   padding-bottom: $vertical;
+   padding-left: $horizontal;
+}
+
+@mixin foco {
+   outline: $espacamento * 0.15 solid $cor-ouro;
+   outline-offset: $espacamento * 0.15;
+}

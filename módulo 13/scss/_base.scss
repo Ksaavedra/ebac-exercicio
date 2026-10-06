@@ -1,0 +1,28 @@
+@use "variaveis" as *;
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   margin: 0;
+   font-family: $fonte-principal;
+   font-size: $tamanho-texto;
+   line-height: $altura-linha;
+   color: $cor-tinta;
+   background: $cor-papel;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+blockquote,
+address {
+   margin: 0;
+}

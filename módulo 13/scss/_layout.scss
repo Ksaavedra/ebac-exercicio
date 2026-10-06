@@ -1,0 +1,125 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.secao {
+   @include espacamento($espacamento-secao);
+   scroll-margin-top: $espacamento * 3;
+
+   &__intro {
+      max-width: $espacamento * 36;
+      margin-bottom: $espacamento-duplo;
+   }
+}
+
+.cabecalho {
+   @include espacamento($espacamento);
+   position: sticky;
+   top: 0;
+   z-index: 2;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   gap: $espacamento * 0.75 $espacamento * 1.5;
+   background: $cor-papel;
+   border-bottom: $borda solid $cor-borda;
+}
+
+.home {
+   display: flex;
+   flex-direction: column;
+   gap: $espacamento-duplo;
+
+   &__imagem {
+      order: -1;
+      margin: 0;
+   }
+
+   @media (min-width: $tela-desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 4vw;
+
+      &__imagem {
+         order: 0;
+         flex: 1.15 1 55%;
+      }
+
+      &__texto {
+         flex: 0.85 1 40%;
+      }
+   }
+}
+
+.sobre {
+   display: flex;
+   flex-direction: column;
+   gap: $espacamento-duplo;
+   background: $cor-papel-claro;
+
+   &__imagem {
+      margin: 0;
+   }
+
+   &__lista {
+      padding: 0;
+      list-style: none;
+   }
+
+   &__item {
+      margin-bottom: $espacamento * 0.75;
+   }
+
+   @media (min-width: $tela-tablet) {
+      flex-direction: row;
+      align-items: center;
+
+      &__imagem {
+         flex: 1 1 42%;
+      }
+
+      &__conteudo {
+         flex: 1 1 50%;
+      }
+   }
+}
+
+.servicos {
+   background: $cor-tinta;
+   color: $cor-texto-claro;
+}
+
+.depoimentos {
+   background: $cor-areia;
+}
+
+.contato {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: $espacamento-duplo;
+   background: $cor-papel-claro;
+
+   &__endereco {
+      font-style: normal;
+   }
+
+   &__link {
+      color: $cor-link;
+      font-weight: $peso-forte;
+   }
+
+   @media (min-width: $tela-desktop) {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+   }
+}
+
+.rodape {
+   padding: $espacamento * 1.5 $lateral $espacamento-duplo;
+   color: $cor-apagada;
+   font-size: $espacamento * 0.9;
+
+   &__texto {
+      margin: 0;
+   }
+}
